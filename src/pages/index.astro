@@ -1,0 +1,174 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		
+		<nav class="topnav">
+			<div class="topnav-logo">
+				<img src="" alt="Logo">
+			</div>
+			<div class="topnav-links">
+				<a href="#">Home</a>
+				<a href="#">About</a>
+				<a href="#">Contact</a>
+			</div>
+		</nav>
+
+
+		<!--See why flex is not working, reference inspec tool -->
+		<div class="hero-section">
+			<h1 class="hero-h1">Welcome to the new Framework</h1>
+		</div>
+
+		<h1>Welcome to your new<span class="text-gradient"> Framework</span></h1>
+		<p class="instructions">
+			To get started, open the directory <code>src/pages</code> in your project.<br />
+			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="Documentation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="Integrations"
+				body="Supercharge your project with new frameworks and libraries."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Themes"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Community"
+				body="Come say hi to our amazing Discord community. ❤️"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+
+
+<style>
+	main {
+		width: 100%;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	/* First section */
+	.hero-section{
+		display: flex;
+		height: 85vh;
+		background-image: url("../hero_background.png");
+		background-size: cover;
+		background-position: center;
+		z-index: 1;
+	}
+
+	/* Title inside of hero section */
+	.hero-h1{
+		justify-content: center;
+		align-items: center;
+		color: black;
+	}
+
+		/* Add a black background color to the top navigation */
+	.topnav {
+		height: 60px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: rgba(11, 11, 11, 0.5); /* Set background color with transparency */
+		backdrop-filter: blur(10px); /* Apply a blur effect */
+		position: fixed;
+		width: 100%;
+		z-index: 2;
+	}
+
+	.topnav-logo img{
+		height: 45px;
+		width: 45px;
+		border-radius: 50%;
+		padding-left: 16px;
+	}
+
+	/* Style the links inside the navigation bar */
+	.topnav a {
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+	}
+
+	/* Change the color of links on hover */
+	.topnav a:hover {
+		background-color: #ddd;
+		color: black;
+	}
+
+	/* Add a color to the active/current link */
+	.topnav a.active {
+		background-color: #04AA6D;
+		color: white;
+	}
+
+	--- 
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		position: relative;
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+
+</style>
