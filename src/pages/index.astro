@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import About from '../components/About.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -19,17 +20,20 @@ import Card from '../components/Card.astro';
 
 
 		<!--See why flex is not working, reference inspect tool -->
-		<section>
-			<div class="hero-section">
-				<h1 class="hero-h1">Welcome to the new Framework</h1>
-			</div>
-		</section>
+		<div class="hero-section">
+			<h1 class="hero-h1">Welcome to the new Framework</h1>
+		</div>
+		<div class="about-section">
+			<About
+				image="src/about_image.png";
+				alternate="Japanese Image";
+				title="About";
+				para_one="Etiam ultricies pulvinar vulputate. Curabitur id pulvinar tellus, et posuere nibh. Donec volutpat dictum ex. Ut iaculis mollis dui, a scelerisque risus fermentum id. Nam a nunc at turpis imperdiet accumsan. Proin efficitur odio in dui bibendum sodales. Sed vel augue ac nibh vehicula blandit in ac sapien. Nam at semper lorem. ";
+				para_two="Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sem tellus, commodo sit amet urna id, dictum dictum magna. Morbi sapien tortor, finibus quis ligula eget, pretium blandit erat. Nam vitae accumsan risus. Vestibulum augue quam, rutrum sollicitudin dolor vel, pharetra ultrices odio. Nulla fermentum lacus nec neque finibus, eget aliquam purus pulvinar. Aliquam ante ligula, consequat sit amet neque sed, luctus vulputate massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. ";
+			/>
+		</div>
 
-		<section>
-
-		</section>
-
-		<h1>Welcome to your new<span class="text-gradient"> Framework</span></h1>
+		<h1>Take a look at our new<span class="text-gradient"> Products</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -68,24 +72,7 @@ import Card from '../components/Card.astro';
 		line-height: 1.6;
 	}
 
-	/* First section */
-	.hero-section{
-		display: flex;
-		height: 85vh;
-		background-image: url("../hero_background.png");
-		background-size: cover;
-		background-position: center;
-		z-index: 1;
-		justify-content: center;
-		align-items: center;
-	}
-
-	/* Title inside of hero section */
-	.hero-h1{
-		
-	}
-
-		/* Add a black background color to the top navigation */
+			/* Add a black background color to the top navigation */
 	.topnav {
 		height: 60px;
 		display: flex;
@@ -126,6 +113,29 @@ import Card from '../components/Card.astro';
 		color: white;
 	}
 
+	/* First section */
+	.hero-section{
+		display: flex;
+		height: 85vh;
+		background-image: url("../hero_background.png");
+		background-size: cover;
+		background-position: center;
+		z-index: 1;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* Title inside of hero section */
+	.hero-h1{
+		
+	}
+
+	.about-section{
+		display: flex;
+		height: 90vh;
+		
+	}
+
 	--- 
 	.astro-a {
 		position: absolute;
@@ -145,7 +155,8 @@ import Card from '../components/Card.astro';
 		margin-bottom: 1em;
 	}
 	.text-gradient {
-		background-image: var(--accent-gradient);
+		background: rgb(222,0,0);
+		background: var(--gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;

@@ -1,0 +1,64 @@
+---
+interface Props {
+    image: string;
+    alternate: string;
+    title: string;
+    para_one: string;
+    para_two: string;
+}
+
+const {image, alternate, title, para_one, para_two} = Astro.props;
+---
+
+
+<div class="left-column">
+    <img src={image} alt={alternate}>
+</div>
+<div class="right-column">
+    <div class="right-col-body">
+        <h1>
+            {title}
+        </h1>
+        <p>
+            {para_one}<br>
+            {para_two}
+        </p>
+    </div>
+</div>
+
+
+<style>
+
+    img{
+        width: 100%;
+        height: 100%;
+
+    }
+    p{
+        padding: 20px;
+    }
+    .left-column{
+        width: 35%;
+    }
+
+    .right-column{
+        display: flex;
+        align-items: center;
+        width: 65%;
+        padding: 10px;
+        
+    }
+
+    .right-col-body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+
+</style>
+
+
+
