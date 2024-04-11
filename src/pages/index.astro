@@ -18,10 +18,16 @@ import Card from '../components/Card.astro';
 		</nav>
 
 
-		<!--See why flex is not working, reference inspec tool -->
-		<div class="hero-section">
-			<h1 class="hero-h1">Welcome to the new Framework</h1>
-		</div>
+		<!--See why flex is not working, reference inspect tool -->
+		<section>
+			<div class="hero-section">
+				<h1 class="hero-h1">Welcome to the new Framework</h1>
+			</div>
+		</section>
+
+		<section>
+
+		</section>
 
 		<h1>Welcome to your new<span class="text-gradient"> Framework</span></h1>
 		<p class="instructions">
@@ -54,11 +60,10 @@ import Card from '../components/Card.astro';
 </Layout>
 
 
-
 <style>
 	main {
 		width: 100%;
-		color: white;
+		color: var(--typography);
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -71,13 +76,13 @@ import Card from '../components/Card.astro';
 		background-size: cover;
 		background-position: center;
 		z-index: 1;
+		justify-content: center;
+		align-items: center;
 	}
 
 	/* Title inside of hero section */
 	.hero-h1{
-		justify-content: center;
-		align-items: center;
-		color: black;
+		
 	}
 
 		/* Add a black background color to the top navigation */
@@ -86,7 +91,7 @@ import Card from '../components/Card.astro';
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background-color: rgba(11, 11, 11, 0.5); /* Set background color with transparency */
+		background-color: rgba(82, 117, 133, 0.5); /* Set background color with transparency */
 		backdrop-filter: blur(10px); /* Apply a blur effect */
 		position: fixed;
 		width: 100%;
@@ -102,7 +107,7 @@ import Card from '../components/Card.astro';
 
 	/* Style the links inside the navigation bar */
 	.topnav a {
-		color: white;
+		color: var(--primary);
 		text-align: center;
 		padding: 14px 16px;
 		text-decoration: none;
@@ -111,8 +116,8 @@ import Card from '../components/Card.astro';
 
 	/* Change the color of links on hover */
 	.topnav a:hover {
-		background-color: #ddd;
-		color: black;
+		background-color: var(--primary);
+		color: var(--typography);
 	}
 
 	/* Add a color to the active/current link */
