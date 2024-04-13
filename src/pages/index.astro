@@ -32,7 +32,6 @@ import About from '../components/About.astro';
 				para_two="Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sem tellus, commodo sit amet urna id, dictum dictum magna. Morbi sapien tortor, finibus quis ligula eget, pretium blandit erat. Nam vitae accumsan risus. Vestibulum augue quam, rutrum sollicitudin dolor vel, pharetra ultrices odio. Nulla fermentum lacus nec neque finibus, eget aliquam purus pulvinar. Aliquam ante ligula, consequat sit amet neque sed, luctus vulputate massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. ";
 			/>
 		</div>
-
 		<div class="product-section">
 			<h1>Take a look at our new<span class="text-gradient"> Products</span></h1>
 			<ul role="list" class="link-card-grid">
@@ -53,11 +52,32 @@ import About from '../components/About.astro';
 				/>
 			</ul>
 		</div>
+		<div class="footer">
+			<ul class="footer-info">
+				<li class="image-item"><img src="src/images/logo.png" alt="Logo" width="70px" height="70px"></li>
+				<li class="footer-header"><strong>Company name</strong></li>
+				<li>Little paragraph about the company.</li>
+			</ul>
+			<ul class="footer-info">
+				<li class="footer-header"><strong>Browse</strong></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<ul class="footer-info">
+				<li class="footer-header"><strong>Contact</strong></li>
+				<li><a href="#">1234 MemoryLane</a></li>
+				<li><a href="#">memorylane@gmail.com</a></li>
+				<li>575-123-4567</li>
+			</ul>
+		</div>
+		
 	</main>
 </Layout>
 
 
 <style>
+
 	main {
 		width: 100%;
 		color: var(--typography);
@@ -170,5 +190,32 @@ import About from '../components/About.astro';
 		gap: 2rem;
 		padding: 0;
 	}
+
+	.footer{
+		height: 400px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--secondary);
+		list-style-type: none;
+	}
+
+	.footer ul{
+		list-style-type: none;
+	}
+
+	.foot-info{
+		height: 7rem;
+	}
+
+	.footer-info a{
+		color: var(--typography);
+		text-decoration: none;
+	}
+	
+	.image-item{
+		height: 64px;
+	}
+
 
 </style>
