@@ -9,7 +9,7 @@ import About from '../components/About.astro';
 		
 		<nav class="topnav">
 			<div class="topnav-logo">
-				<img src="src/images/logo.png" alt="Logo">
+				<img src="public/images/logo.png" alt="Logo">
 			</div>
 			<div class="topnav-links">
 				<a href="#">Home</a>
@@ -25,7 +25,7 @@ import About from '../components/About.astro';
 		</div>
 		<div class="about-section">
 			<About
-				image="src/images/about_image.png";
+				image="public/images/about_image.png";
 				alternate="Japanese Image";
 				title="About";
 				para_one="Etiam ultricies pulvinar vulputate. Curabitur id pulvinar tellus, et posuere nibh. Donec volutpat dictum ex. Ut iaculis mollis dui, a scelerisque risus fermentum id. Nam a nunc at turpis imperdiet accumsan. Proin efficitur odio in dui bibendum sodales. Sed vel augue ac nibh vehicula blandit in ac sapien. Nam at semper lorem. ";
@@ -54,7 +54,7 @@ import About from '../components/About.astro';
 		</div>
 		<div class="footer">
 			<ul class="footer-info">
-				<li class="image-item"><img src="src/images/logo.png" alt="Logo" width="70px" height="70px"></li>
+				<li class="image-item"><img src="public/images/logo.png" alt="Logo" width="70px" height="70px"></li>
 				<li class="footer-header"><strong>Company name</strong></li>
 				<li>Little paragraph about the company.</li>
 			</ul>
@@ -74,148 +74,3 @@ import About from '../components/About.astro';
 		
 	</main>
 </Layout>
-
-
-<style>
-
-	main {
-		width: 100%;
-		color: var(--typography);
-		font-size: 20px;
-		line-height: 1.6;
-	}
-
-			/* Add a black background color to the top navigation */
-	.topnav {
-		height: 60px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background-color: rgba(82, 117, 133, 0.5); /* Set background color with transparency */
-		backdrop-filter: blur(10px); /* Apply a blur effect */
-		position: fixed;
-		width: 100%;
-		z-index: 2;
-	}
-
-	.topnav-logo{
-		display: flex;
-		justify-content: center;
-		padding: 10px;
-		margin-top: .3rem;
-	}
-
-	.topnav-logo img{
-		height: 45px;
-		width: 45px;
-	}
-
-	/* Style the links inside the navigation bar */
-	.topnav a {
-		color: var(--primary);
-		text-align: center;
-		padding: 14px 16px;
-		text-decoration: none;
-		font-size: 17px;
-	}
-
-	/* Change the color of links on hover */
-	.topnav a:hover {
-		background-color: var(--primary);
-		color: var(--typography);
-	}
-
-	/* Add a color to the active/current link */
-	.topnav a.active {
-		background-color: #04AA6D;
-		color: white;
-	}
-
-	/* First section */
-	.hero-section{
-		display: flex;
-		height: 85vh;
-		background-image: url("src/images/hero_background.png");
-		background-size: cover;
-		background-position: center;
-		z-index: 1;
-		justify-content: center;
-		align-items: center;
-	}
-
-	/* Title inside of hero section */
-	.hero-h1{
-		margin-top: -10%;
-	}
-
-	.about-section{
-		display: flex;
-		height: 90vh;
-		
-	}
-
-	.product-section{
-		padding: 14px;
-	}
-
-	--- 
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		position: relative;
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background: rgb(222,0,0);
-		background: var(--gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-
-	.footer{
-		height: 400px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: var(--secondary);
-		list-style-type: none;
-	}
-
-	.footer ul{
-		list-style-type: none;
-	}
-
-	.foot-info{
-		height: 7rem;
-	}
-
-	.footer-info a{
-		color: var(--typography);
-		text-decoration: none;
-	}
-	
-	.image-item{
-		height: 64px;
-	}
-
-
-</style>

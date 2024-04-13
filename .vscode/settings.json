@@ -1,3 +1,6 @@
 {
-    "livePreview.defaultPreviewPath": "/src/pages/file.html"
+    "livePreview.defaultPreviewPath": "/src/pages/file.html",
+    "cSpell.words": [
+        "topnav"
+    ]
 }
