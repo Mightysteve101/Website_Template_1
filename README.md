@@ -1,1 +1,1 @@
-Update Readme file, add pictures to website
+Exploring frameworks just out of curiousity. I am trying out Astro which I like so far. Made a basic static website template to see how the framework operates.[Screen Recording 2024-04-16 at 21.42.07.zip](https://github.com/Mightysteve101/Website_Template_1/files/15005247/Screen.Recording.2024-04-16.at.21.42.07.zip)
